@@ -1,0 +1,414 @@
+body {
+    font-family: 'Nunito', arial, sans-serif;
+    background-color: #6699CC;
+    /* border: 2px solid pink; */
+}
+
+/* MODAL */
+
+.modal-window {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(10,10,10,0.25);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 3px;
+  z-index: 1;
+}
+
+.modal-window.hidden {
+  display: none;
+}
+
+.modal-content {
+  background-color: #ff5358;
+  color: white;
+  width: 90%;
+  max-width: 600px;
+  padding: 30px;
+  position: relative;
+}
+
+#close-modal {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  /*  adding some padding to the close button gives it more 'click space', and adding a cursor: pointer makes it more obvious that it's clickable  */
+  padding: 5px;
+  cursor: pointer;
+}
+
+/* HEADER */
+
+header {
+    display: flex;
+    padding: 40px;
+}
+
+header h1 {
+/*   border: 5px solid white; */
+}
+
+header > img {
+    height: 75px;
+/*     border: 5px solid green; */
+}
+
+/* TOPNAV */
+
+.topnav {
+  overflow: hidden;
+  background-color: #e9e9e9;
+}
+
+.topnav a {
+  float: left;
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.topnav a.active {
+  background-color: #2196F3;
+  color: white;
+}
+
+.topnav .search-container {
+  float: right;
+}
+
+.topnav input[type=text] {
+  padding: 6px;
+  margin-top: 8px;
+  font-size: 17px;
+  border: none;
+}
+
+.topnav .search-container button {
+  float: right;
+  padding: 6px 10px;
+  margin-top: 8px;
+  margin-right: 16px;
+  background: #ddd;
+  font-size: 17px;
+  border: none;
+  cursor: pointer;
+}
+
+.topnav .search-container button:hover {
+  background: #ccc;
+}
+
+@media screen and (max-width: 600px) {
+  .topnav .search-container {
+    float: none;
+  }
+  .topnav a, .topnav input[type=text], .topnav .search-container button {
+    float: none;
+    display: block;
+    text-align: left;
+    width: 100%;
+    margin: 0;
+    padding: 14px;
+  }
+  .topnav input[type=text] {
+    border: 1px solid #ccc;
+  }}
+
+/* HERO SECTION */
+
+.hero {
+    background-image: url('https://i.imgur.com/6szaXYH.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 750px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: red;
+    font-weight: bold;
+
+    padding: 25px;
+/*     border: 5px solid purple; */
+}
+
+.hero-text: {
+  border: 5px solid orange;
+}
+
+.hero h1 {
+  background color: gray;
+}
+
+.hero p {
+  /* border: 5px solid yellow; */
+}
+
+.hero-button {
+  background-color: #ff5358;
+  border: 2px solid #e00007;
+  border-radius: 3px;
+  color: white;
+  cursor: pointer;
+  font-size: 20px;
+  margin: 15px auto;
+  text-align: center;
+  transition: 0.5s ease-in-out;
+  width: 250px;
+}
+
+.hero-button:hover {
+  background-color: #e00007;
+}
+
+.hero-button-text {
+  padding: 10px;
+}
+
+/* MERCH & MAILING SECTION */
+
+.merch-and-mailing {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 30px;
+    padding: 40px;
+    /* border: 5px solid yellow; */
+}
+
+.block {
+    border: 1px solid lightgray;
+    /* border: 5px solid green; */
+}
+
+.block h2 {
+    margin: 0;
+    padding: 15px;
+    background-color: #e9e9e9;
+    /* border: 5px solid pink; */
+}
+
+.block > div {
+    background-color: white;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    gap: 15px;
+
+}
+
+/* STAFF PICKS SLIDER  */
+
+.font-weight-light {
+  color: white;
+}
+
+.card-img {
+  backround-color: black:
+}
+
+@media (max-width: 767px) {
+    .carousel-inner .carousel-item > div {
+        display: none;
+    }
+    .carousel-inner .carousel-item > div:first-child {
+        display: block;
+    }
+}
+
+.carousel-inner .carousel-item.active,
+.carousel-inner .carousel-item-next,
+.carousel-inner .carousel-item-prev {
+    display: flex;
+}
+
+/* medium and up screens */
+@media (min-width: 768px) {
+
+    .carousel-inner .carousel-item-end.active,
+    .carousel-inner .carousel-item-next {
+      transform: translateX(25%);
+    }
+
+    .carousel-inner .carousel-item-start.active,
+    .carousel-inner .carousel-item-prev {
+      transform: translateX(-25%);
+    }
+}
+
+.carousel-inner .carousel-item-end,
+.carousel-inner .carousel-item-start {
+  transform: translateX(0);
+}
+
+.staff-pick-text {
+  height: 300px;
+}
+
+ /*  add a small gray box around the arrow  */
+.carousel-control-next-icon, .carousel-control-prev-icon {
+
+  background-color: #d6d6d6;
+}
+
+/* 3 BOX SECTION */
+
+.staff-picks-container {
+  padding: 50px 5px;
+
+}
+
+.staff-picks-title {
+  font-size: 32px;
+  text-align: center;
+}
+
+.staff-picks-container-x3 {
+  justify-content: center;
+  display: flex;
+
+}
+
+.staff-picks-container-individual {
+  margin: 1%;
+  width: 30%;
+
+}
+
+.staff-picks-individual-header {
+  align-items: center;
+  background-position: center center;
+  background-size: cover;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  height: 300px;
+  justify-content: space-around;
+  text-align: center;
+
+}
+
+/* /* STAFF PICKS IMAGES */
+
+.staff-picks-individual-image-one  { background-image: url('https://i.imgur.com/VAZfdA8.jpg');
+  transition: all 0.4s ease-in-out;
+}
+.staff-picks-individual-image-two { background-image: url('https://i.imgur.com/cEayARP.jpg');
+transition: all 0.4s ease-in-out;
+}
+.staff-picks-individual-image-three  { background-image: url('https://i.imgur.com/ayz6raP.jpg');
+  transition: all 0.4s ease-in-out;
+}
+
+/* ADD HOVER EFFECT */
+
+.staff-picks-individual-image-one:hover {
+filter: brightness(75%);
+}
+.staff-picks-individual-image-two:hover {
+filter: brightness(75%);
+}
+
+.staff-picks-individual-image-three:hover {
+filter: brightness(75%);
+}
+
+.staff-picks-individual-title {
+  font-size: 30px;
+}
+
+.staff-picks-individual-subtitle {
+  font-size: 15px;
+}
+
+.staff-picks-individual-details {
+  background-color: #efefef;
+  border: 1px solid #dbdbdb;
+  line-height: 1.4;
+  margin: 0;
+  min-height: 50px;
+  padding: 20px;
+  font-size: 16px;
+}
+
+/* TWITTER TIMELINE */
+
+.twitter-timeline {
+  margin: 35px;
+}
+
+/* FOOTER */
+
+.footer {
+  align-items: center;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  height: 150px;
+  justify-content: center;
+  padding: 50px;
+}
+
+hr {
+  border: 2px solid rgba(255,255,255,0.2);
+  margin-bottom: 40px;
+  width: 95%;
+}
+
+.red-eye-address {
+  font-style: italic;
+  font-weight: lighter;
+}
+
+ .social-icon-container {
+  display: flex;
+  flex-direction: row;
+  align-self: flex-end;
+  padding: 10px;
+
+  }
+
+/* SOCIAL ICONS */
+.fa {
+  padding: 20px;
+  font-size: 30px;
+  width: 50px;
+  text-align: center;
+  text-decoration: none;
+
+}
+
+/* hover effect */
+.fa:hover {
+  opacity: 0.7;
+}
+
+/* Set a specific color for each brand */
+
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+
+.fa-twitter {
+  background: #55ACEE;
+  color: white;
+}
+
+.fa-instagram {
+  background: #127997;
+  color: white;
+}
