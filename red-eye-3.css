@@ -1,7 +1,7 @@
 body {
     font-family: 'Nunito', arial, sans-serif;
+    /* 'red-eye blue' */
     background-color: #6699CC;
-    /* border: 2px solid pink; */
 }
 
 /* MODAL */
@@ -17,6 +17,7 @@ body {
   align-items: center;
   justify-content: center;
   border-radius: 3px;
+  /* stand out with z-index */
   z-index: 1;
 }
 
@@ -37,7 +38,6 @@ body {
   position: absolute;
   right: 10px;
   top: 10px;
-  /*  adding some padding to the close button gives it more 'click space', and adding a cursor: pointer makes it more obvious that it's clickable  */
   padding: 5px;
   cursor: pointer;
 }
@@ -49,13 +49,8 @@ header {
     padding: 40px;
 }
 
-header h1 {
-/*   border: 5px solid white; */
-}
-
 header > img {
     height: 75px;
-/*     border: 5px solid green; */
 }
 
 /* TOPNAV */
@@ -111,6 +106,7 @@ header > img {
   background: #ccc;
 }
 
+/* stack on smaller screen */
 @media screen and (max-width: 600px) {
   .topnav .search-container {
     float: none;
@@ -141,9 +137,7 @@ header > img {
     align-items: center;
     color: red;
     font-weight: bold;
-
     padding: 25px;
-/*     border: 5px solid purple; */
 }
 
 .hero-text: {
@@ -152,10 +146,6 @@ header > img {
 
 .hero h1 {
   background color: gray;
-}
-
-.hero p {
-  /* border: 5px solid yellow; */
 }
 
 .hero-button {
@@ -177,37 +167,6 @@ header > img {
 
 .hero-button-text {
   padding: 10px;
-}
-
-/* MERCH & MAILING SECTION */
-
-.merch-and-mailing {
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    gap: 30px;
-    padding: 40px;
-    /* border: 5px solid yellow; */
-}
-
-.block {
-    border: 1px solid lightgray;
-    /* border: 5px solid green; */
-}
-
-.block h2 {
-    margin: 0;
-    padding: 15px;
-    background-color: #e9e9e9;
-    /* border: 5px solid pink; */
-}
-
-.block > div {
-    background-color: white;
-    display: flex;
-    align-items: center;
-    padding: 10px;
-    gap: 15px;
-
 }
 
 /* STAFF PICKS SLIDER  */
@@ -258,33 +217,51 @@ header > img {
   height: 300px;
 }
 
- /*  add a small gray box around the arrow  */
 .carousel-control-next-icon, .carousel-control-prev-icon {
   background-color: #d6d6d6;
+}
+
+/* MERCH & MAILING SECTION */
+
+.two-block-section {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 30px;
+    padding: 40px;
+}
+
+.block {
+    border: 1px solid lightgray;
+}
+
+.block h2 {
+    margin: 0;
+    padding: 15px;
+    background-color: #e9e9e9;
+}
+
+.block > div {
+    background-color: white;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    gap: 15px;
 }
 
 /* 3 BOX SECTION */
 
 .staff-picks-container {
   padding: 50px 5px;
-
-}
-
-.staff-picks-title {
-  font-size: 32px;
-  text-align: center;
 }
 
 .staff-picks-container-x3 {
   justify-content: center;
   display: flex;
-
 }
 
 .staff-picks-container-individual {
   margin: 1%;
   width: 30%;
-
 }
 
 .staff-picks-individual-header {
@@ -297,43 +274,42 @@ header > img {
   height: 300px;
   justify-content: space-around;
   text-align: center;
-
 }
 
-/* /* STAFF PICKS IMAGES */
+/* 3 BOX SECTION IMAGES */
 
-.staff-picks-individual-image-one  { background-image: url('https://i.imgur.com/VAZfdA8.jpg');
+.three-box-image-one  { background-image: url('https://i.imgur.com/VAZfdA8.jpg');
   transition: all 0.4s ease-in-out;
 }
-.staff-picks-individual-image-two { background-image: url('https://i.imgur.com/cEayARP.jpg');
+.three-box-image-two { background-image: url('https://i.imgur.com/cEayARP.jpg');
 transition: all 0.4s ease-in-out;
 }
-.staff-picks-individual-image-three  { background-image: url('https://i.imgur.com/ayz6raP.jpg');
+.three-box-image-three { background-image: url('https://i.imgur.com/ayz6raP.jpg');
   transition: all 0.4s ease-in-out;
 }
 
 /* ADD HOVER EFFECT */
 
-.staff-picks-individual-image-one:hover {
+.three-box-image-one:hover {
 filter: brightness(75%);
 }
-.staff-picks-individual-image-two:hover {
-filter: brightness(75%);
-}
-
-.staff-picks-individual-image-three:hover {
+.three-box-image-two:hover {
 filter: brightness(75%);
 }
 
-.staff-picks-individual-title {
+.three-box-image-three:hover {
+filter: brightness(75%);
+}
+
+/* .staff-picks-individual-title {
   font-size: 30px;
-}
+} */
 
-.staff-picks-individual-subtitle {
+/* .staff-picks-individual-subtitle {
   font-size: 15px;
-}
+} */
 
-.staff-picks-individual-details {
+.three-box-details-box-one {
   background-color: #efefef;
   border: 1px solid #dbdbdb;
   line-height: 1.4;
@@ -377,17 +353,17 @@ hr {
   flex-direction: row;
   align-self: flex-end;
   padding: 10px;
-
   }
 
 /* SOCIAL ICONS */
+
+/* font awesome - in head tag */
 .fa {
   padding: 20px;
   font-size: 30px;
   width: 50px;
   text-align: center;
   text-decoration: none;
-
 }
 
 /* hover effect */
@@ -395,8 +371,7 @@ hr {
   opacity: 0.7;
 }
 
-/* Set a specific color for each brand */
-
+/* Colors for each brand */
 .fa-facebook {
   background: #3B5998;
   color: white;
